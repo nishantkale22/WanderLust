@@ -1,0 +1,62 @@
+<% layout("/layout/boilerplate.ejs") -%>
+
+<style>
+.filters{
+  display: flex;
+}
+.filter{
+  margin-right: 2rem;
+  text-align: center;
+  opacity: 0.7;
+}
+.filter:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+.filter p{
+  font-size: 0.98rem;
+}
+.filter i {
+  font-size: 0.98rem;
+}
+
+</style>
+<div class="filters mt-3">
+  <div class="filter">
+    <i class="fa-brands fa-fort-awesome"></i>
+    <p>Castles</p>
+  </div>
+  <div class="filter">
+    <i class="fa-solid fa-mountain"></i></i>
+    <p>Hills</p>
+  </div>
+  <div class="filter">
+    <i class="fa-solid fa-fire"></i></i>
+    <p>Trending</p>
+  </div>
+  <div class="filter">
+    <i class="fa-solid fa-umbrella-beach"></i></i>
+    <p>Beach-Front</p>
+  </div>
+  <div class="filter">
+    <i class="fa-solid fa-caravan"></i></i>
+    <p>Camper Vans</p>
+  </div>
+</div>
+    
+<div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 row-cols-lg-3" >
+    <% for(listing of alldata){ %>
+      <a href="listings/<%=listing._id  %>"  style="text-decoration: none;">
+    <div class="card col" >
+      <div class="card-img-overlay"></div>
+      <img src="<%=listing.image.url  %>" class="card-img-top" alt="listing_img" style="height: 18rem" />
+      <div class="card-body">
+        <p class="card-text">
+          <div class="title"><b><%=listing.title  %></b></div>
+          <div class="price"></b>&#8377 <%=listing.price.toLocaleString("en-IN") %> /night</div>
+        </p>
+      </div>
+    </div>
+  </a>
+    <%}%>
+  </div>

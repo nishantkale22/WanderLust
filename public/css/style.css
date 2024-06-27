@@ -1,0 +1,86 @@
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  flex: 1;
+}
+.navbar-brand {
+  color: rgb(219, 18, 18);
+  margin-left: 10px;
+}
+nav {
+  margin-bottom: 0.7rem;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgb(228, 228, 228);
+  padding-top: 1rem;
+}
+.f-links,
+.f-info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fa-brands {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.f-info a {
+  text-decoration: none;
+  color: black;
+  margin-right: 10px;
+}
+.f-info a:hover {
+  text-decoration: underline;
+}
+
+.row {
+  width: 100%;
+}
+.card {
+  border: none;
+  height: 100%;
+}
+
+.card-img-top {
+  border-radius: 1rem;
+}
+.card-body {
+  padding: 0px;
+}
+
+.card-img-overlay {
+  opacity: 0;
+}
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: white;
+}
+
+/* show page  */
+.buttons {
+  display: flex;
+  padding-left: 1%;
+}
+.edit-btn {
+  margin-right: 20%;
+}
+
+.card-info {
+  margin-left: 12.5vw;
+}
+
+/* map */
+#map {
+  height: 400px;
+  width: 90vh;
+  margin-bottom: 10px;
+}
